@@ -2,7 +2,8 @@ const express = require('express');
 
 const router = express.Router()
 const User = require('../model/model');
-//Post Method
+
+
 router.post('/addUser', async (req, res) => {
     const data = new User({
         name: req.body.name,
@@ -19,6 +20,16 @@ router.post('/addUser', async (req, res) => {
 })
 
 //Get all Method
+/**
+ * @swagger
+ * /api/getAll:
+ *   get:
+ *     summary: Get a list of users
+ *     description: Retrieve a list of all users from the database
+ *     responses:
+ *       200:
+ *         description: A list of users
+ */
 router.get('/getAll', async (req, res) => {
     try{
         const data = await User.find();

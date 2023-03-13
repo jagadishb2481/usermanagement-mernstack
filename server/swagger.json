@@ -1,0 +1,14 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "My API",
+    "description": "API documentation for my Express.js REST service"
+  },
+  "basePath": "/api/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {}
+}
